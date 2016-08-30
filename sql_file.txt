@@ -1,0 +1,77 @@
+1)...unless the foreign key points to existing employee to an 
+2) If a record in employee table is deleted, all corresponding record salary 
+   must be deleted too using a cascading delete!
+3) if a primary key for a record in the employee table changes, all coorespoinding
+   records in the employee salary must be modified.
+   ( by using casade update )
+
+
+create table person24
+(driver_id varchar(30),
+ name varchar(30),
+ address varchar(30),
+ primary key(driver_id) );
+
+insert into person24 VALUES('3', 'Aishwarya','606 Block 13');
+insert into person24 VALUES( '5', 'Sai', '123 Block 13' );
+
+==========================================================
+create table car24
+(regno varchar(30),
+ model varchar(30),
+ year int,
+ primary key(regno) );
+
+insert into car24 VALUES('12','2332sa',1999);
+insert into car24 VALUES('13','232ad', 2000);
+insert into car24 VALUES('14','23fs',2011);
+insert into car24 VALUES('15','ew23',2001);
+insert into car24 VALUES('16','fd34',1998);
+
+===========================================================
+
+create table accident24
+(report_number int,
+ accd_date date,
+ location varchar(30),
+ primary key(report_number) );
+
+
+insert into accident24 VALUES(100,'01-JAN-2016','Manipal');
+insert into accident24 VALUES(101,'02-FEB-2016','Udupi');
+insert into accident24 VALUES(102,'03-MAR-2016','Udupi');
+insert into accident24 VALUES(103,'04-APR-2016','Manipal');
+
+
+===========================================================
+
+create table owns24
+(driver_id varchar(30),
+ regno varchar(30),
+ primary key(driver_id, regno) );
+
+
+insert into owns24 VALUES( '1' , '12' );
+insert into owns24 VALUES( '2' , '13' );
+insert into owns24 VALUES( '3' , '14' );
+insert into owns24 VALUES( '4' , '15' );
+insert into owns24 VALUES( '5' , '16' );
+
+
+============================================================
+
+create table participated24
+(driver_id varchar(30),
+ regno varchar(30),
+ report_number int,
+ damage_amount int,
+ primary key(driver_id, regno,report_number) );
+
+
+insert into participated24 VALUES( '1' , '12', 100, 1212  );
+insert into participated24 VALUES( '2' , '13', 101, 1323  );
+insert into participated24 VALUES( '3' , '14', 102, 3000 );
+insert into participated24 VALUES( '4' , '15', 103, 5000  );
+insert into participated24 VALUES( '5' , '16', 104, 2342  );
+
+============================================================
