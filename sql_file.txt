@@ -76,12 +76,39 @@ insert into participated24 VALUES( '5' , '16', 104, 2342  );
 
 ============================================================
 
-update PARTICIPATED
+
+
+
+
+==========updating the damage amount to 25k in participated24
+update PARTICIPATED24
 set damage_amount = 25000
 where report_number = ...........;
 
-delete from ACCIDENT 
+
+
+
+
+===============deleting values from a spefific year from accident24
+delete from ACCIDENT24
 where extract(year from accd_date) = 2015;
+
+
+
+======================altering table to add and drop
+alter table CAR24
+add time varchar(20);
+
+alter table CAR24
+drop column time;
+
+
+
+
+========constraint
+
+alter table car24
+add primary key( regno, model);
 
 
 
