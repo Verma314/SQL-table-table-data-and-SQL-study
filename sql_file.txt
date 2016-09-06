@@ -75,3 +75,14 @@ insert into participated24 VALUES( '4' , '15', 103, 5000  );
 insert into participated24 VALUES( '5' , '16', 104, 2342  );
 
 ============================================================
+
+update PARTICIPATED
+set damage_amount = 25000
+where report_number = ...........;
+
+delete from ACCIDENT 
+where (extract(year from accd_date)) = 2015;
+
+
+
+
