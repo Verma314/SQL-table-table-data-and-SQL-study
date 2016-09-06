@@ -1,0 +1,14 @@
+LAB 4;
+
+QUESTION 1)
+
+SELECT COUNT(REPORT_NUMBER)
+FROM ACCIDENT
+WHERE EXTRACT( YEAR FROM ACCD_DATE ) = 2016;
+
+
+QUESTION 2)
+
+select count ( participated24.report_number )
+from participated24,car24
+where participated24.regno =car24.regno and car24.model = 'ew23';
