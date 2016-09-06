@@ -81,7 +81,7 @@ set damage_amount = 25000
 where report_number = ...........;
 
 delete from ACCIDENT 
-where (extract(year from accd_date)) = 2015;
+where extract(year from accd_date) = 2015;
 
 
 
