@@ -5,6 +5,29 @@
    records in the employee salary must be modified.
    ( by using casade update )
 
+questions) 
+1. Consider the insurance database given below:
+PERSON (driver_id#: String, name: String, address:String)
+CAR (regno: String, model: String, Year:int)
+ACCIDENT (report_number: int, accd_date: date, location: String)
+OWNS (driver_id#: String, regno: String)
+PARTICIPATED (driver_id#: String, regno: String, report_number: int,
+damage_amount: int)
+i. Create the above tables by properly specifying the primary keys and the foreign
+keys.
+ii. Enter at least five tuples for each relation.
+(Hint: Date format is ‘yyyy-mm-dd’)
+iii. Update the damage amount to 25000 for the car with a specific reg no in the
+ACCIDENT table with report number 12.
+1. Delete the accident and related information that took place in a specific
+year. (Hint: Command to extract year component from the date attribute
+is,
+extract (year from accd_date) )
+iv. Alter table to add and delete an attribute.
+v. Alter table to add Check constraint.
+vi. Create a suitable front end for above requirements.
+
+============================================================
 
 create table person24
 (driver_id varchar(30),
