@@ -12,3 +12,32 @@ QUESTION 2)
 select count ( participated24.report_number )
 from participated24,car24
 where participated24.regno =car24.regno and car24.model = 'ew23';
+
+
+
+QUESTION 3)
+
+Select person24.name as OWNER_NAME, Count(participated24.report_number) , sum(participated24.damage_amount)
+from person24, participated24
+where person24.driver_id = participated24.driver_id
+group by name
+order by Sum(participated24.damage_amount) desc;
+
+
+
+QUESTION 4)
+
+select name, person24.driver_id
+from person24, participated24
+where person24.driver_id = participated24.driver_id
+group by name, person24.driver_id
+having count(participated.report_number) > 2;
+
+
+
+QUESTION 5 -- same as before but count(...) = 0 instead of >2
+select name, person24.driver_id
+from person24, participated24
+where person24.driver_id = participated24.driver_id
+group by name, person24.driver_id
+having count(participated.report_number) = 0;
