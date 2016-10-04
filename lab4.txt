@@ -31,7 +31,7 @@ select name, person24.driver_id
 from person24, participated24
 where person24.driver_id = participated24.driver_id
 group by name, person24.driver_id
-having count(participated.report_number) > 2;
+having count(participated24.report_number) > 2;
 
 
 
@@ -40,4 +40,4 @@ select name, person24.driver_id
 from person24, participated24
 where person24.driver_id = participated24.driver_id
 group by name, person24.driver_id
-having count(participated.report_number) = 0;
+having count(participated24.report_number) = 0;
